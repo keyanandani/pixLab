@@ -19,7 +19,27 @@ public class PictureTester
     // uncomment this in repl.it to test your code!!
     // beach.write("imagesOutput/beach.jpg");
   }
-  
+
+  public static void testKeepOnlyBlue(){
+    Picture beach = new Picture ("images/beach.jpg");
+    beach.explore(); // comment these out in repl.it
+    beach.keepOnlyBlue();
+    beach.explore(); // comment these out in repl.it
+
+  }
+  public static void testNegate(){
+    Picture beach = new Picture ("images/beach.jpg");
+    beach.explore(); // comment these out in repl.it
+    beach.negate();
+    beach.explore(); // comment these out in repl.it
+  }
+
+  public static void testGrayscale(){
+    Picture beach = new Picture ("images/beach.jpg");
+    beach.explore(); // comment these out in repl.it
+    beach.grayscale();
+    beach.explore(); // comment these out in repl.it
+  }
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -61,12 +81,12 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
-    //testKeepOnlyBlue();
+    //testZeroBlue();
+    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    testNegate();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
