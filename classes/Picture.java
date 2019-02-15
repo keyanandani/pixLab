@@ -1,4 +1,4 @@
-//package com.gradescope.pixlab;
+package com.gradescope.pixlab;
 import java.awt.*;
 import java.awt.font.*;
 import java.awt.geom.*;
@@ -34,7 +34,7 @@ public class Picture extends SimplePicture
     }
 
     public void fixUnderwater(){
-        
+
     }
     /**
      * Constructor that takes a file name and creates the picture
