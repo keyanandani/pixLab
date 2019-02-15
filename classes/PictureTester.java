@@ -3,7 +3,7 @@
  * that will help you test the Picture class 
  * methods.  Uncomment the methods and the code
  * in the main to test.
- * 
+ *
  * @author Barbara Ericson 
  */
 public class PictureTester
@@ -56,6 +56,19 @@ public class PictureTester
     caterpillar.explore();
   }
 
+  public static void testmirrorHorizontal(){
+    Picture caterpillar = new Picture("images/caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+
+  public static void testMirrorHorizontalBotToTop(){
+    Picture caterpillar = new Picture("images/caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -64,7 +77,21 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  
+
+  public static void testMirrorArms(){
+    Picture snowman = new Picture("images/snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+
+  public static void testMirrorGull(){
+    Picture seagull = new Picture("images/seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -72,7 +99,7 @@ public class PictureTester
     canvas.createCollage();
     canvas.explore();
   }
-  
+
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
@@ -80,9 +107,9 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
+
   /** Main method for testing.  Every class can have a main
-    * method in Java */
+   * method in Java */
   public static void main(String[] args)
   {
     // uncomment a call here to run a test
@@ -96,10 +123,12 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    testMirrorVerticalRightToLeft();
+    //testMirrorVerticalRightToLeft();
+    //testmirrorHorizontal();
+    //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
