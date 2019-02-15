@@ -1,4 +1,4 @@
-package com.gradescope.pixlab;
+//package com.gradescope.pixlab;
 import java.awt.*;
 import java.awt.font.*;
 import java.awt.geom.*;
@@ -135,7 +135,7 @@ public class Picture extends SimplePicture
         for (Pixel[] rowArray : pixels){
             for (Pixel pixelObj : rowArray)
             {
-                int average = ((pixelObj.getRed()+ pixelObj.getBlue()+pixelObj.getGreen()/3));
+                int average = ((pixelObj.getRed()+ pixelObj.getBlue()+pixelObj.getGreen())/3);
                 pixelObj.setRed(average);
                 pixelObj.setGreen(average);
                 pixelObj.setBlue(average);
@@ -237,7 +237,7 @@ public class Picture extends SimplePicture
         Pixel leftPixel = null;
         Pixel rightPixel = null;
         int width = pixels[0].length;
-        int offset = ((width/2+4) - mirrorPoint)*2;
+        //int offset = ((width/2+4) - mirrorPoint)*2;
 
         // loop through the rows
         for (int row = 155; row < 196; row++)
@@ -246,7 +246,8 @@ public class Picture extends SimplePicture
             for (int col = 100; col < mirrorPoint; col++)
             {
                 leftPixel = pixels[row][col];
-                rightPixel = pixels[row][mirrorPoint + (mirrorPoint - col) + offset];
+                //rightPixel = pixels[row][mirrorPoint + (mirrorPoint - col) + offset];
+                rightPixel = pixels[row][mirrorPoint + (mirrorPoint - col)];
                 rightPixel.setColor(leftPixel.getColor());
             }
         }
