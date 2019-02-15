@@ -1,4 +1,4 @@
-package com.gradescope.pixlab;
+//package com.gradescope.pixlab;
 import java.awt.*;
 import java.awt.font.*;
 import java.awt.geom.*;
@@ -29,6 +29,13 @@ public class Picture extends SimplePicture
         super();
     }
 
+    public void mirrorDiagonal(){
+
+    }
+
+    public void fixUnderwater(){
+        
+    }
     /**
      * Constructor that takes a file name and creates the picture
      * @param fileName the name of the file to create the picture from
