@@ -237,7 +237,6 @@ public class Picture extends SimplePicture
         Pixel leftPixel = null;
         Pixel rightPixel = null;
         int width = pixels[0].length;
-        int offset = ((width/2+4) - mirrorPoint)*2;
 
         // loop through the rows
         for (int row = 155; row < 196; row++)
@@ -246,7 +245,7 @@ public class Picture extends SimplePicture
             for (int col = 100; col < mirrorPoint; col++)
             {
                 leftPixel = pixels[row][col];
-                rightPixel = pixels[row][mirrorPoint + (mirrorPoint - col) + offset];
+                rightPixel = pixels[row][mirrorPoint + (mirrorPoint - col)];
                 rightPixel.setColor(leftPixel.getColor());
             }
         }
